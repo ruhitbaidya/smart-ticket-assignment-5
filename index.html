@@ -177,7 +177,7 @@
         </div>
       </section>
       <section>
-        <div class="container mx-auto p-[20px] borderdrv bg-[#F7F8F8] border-teal-600">
+        <div class="container borderdrv mx-auto p-[20px] bg-[#F7F8F8]">
           <div class="title w-[50%] text-center mx-auto space-y-5 py-[40px]">
             <h2 class="text-4xl font-bold text-center text-black">
               P.H Paribahan
@@ -191,9 +191,9 @@
           <div class="ticket-container mt-[40px]">
             <section id="ticket">
               <div
-                class="cuponone rounded-lg justify-center items-center flex flex-1 bg-[#FFFFFF]"
+                class="cuponone rounded-lg items-center flex flex-1 bg-[#FFFFFF]"
               >
-                <div class="part-1 w-[70%] text-center p-[10px]">
+                <div class="part-1 w-[70%] text-center p-[20px]">
                   <div class="saleArea flex justify-between text-left">
                     <div class="busArea flex-1 flex gap-[20px]">
                       <img src="./images/bus-logo.png" alt="" />
@@ -256,9 +256,9 @@
               </div>
             </section>
             <!-- Ticket booking Container start-->
-            <section class="roundedsec">
+            <section>
               <div
-                class="py-[50px] px-[30px] ticket-booking-area flex gap-[10px] bg-[#FFFFFF] mt-[30px]"
+                class="py-[40px] rounded-lg px-[10px] ticket-booking-area flex gap-[10px] bg-[#FFFFFF] mt-[30px]"
               >
                 <div class="seat w-[60%] spacefiy px-[20px] space-y-6">
                   <h4 class="text-[22px] font-bold mb-[15px]">
@@ -590,11 +590,34 @@
                         placeholder="Enter your email id"
                       />
                     </label>
-                    <button
+                    <button onclick="my_modal_2.showModal()"
                       class="bg-[#1DD100] py-[15px] rounded-lg text-white"
                     >
                       Next
                     </button>
+
+                    <!-- modal start -->
+
+                    <!-- Open the modal using ID.showModal() method -->
+                    <dialog id="my_modal_2" class="modal">
+                      <div class="modal-box">
+                            <div class="flex flex-col justify-center items-center text-center space-y-7">
+                                <img class="w-20" src="./images/success.png" alt="">
+                                <h2 class="text-[30px] text-[#27AE60] font-bold">SUCCESS</h2>
+                                <p class="text-[#4A4A4A]">Thank you for Booking Our Bus Seats. 
+                                    We are working hard to find the best service and deals for you. 
+                                    </p>
+                                    <p class="text-gray-500">Shortly you will find a confirmation in your email.</p>
+                                    <button class="py-[15px] w-[60%] text-white rounded-full bg-[#27AE60]">Continue</button>
+                            </div>
+                      </div>
+                      <form method="dialog" class="modal-backdrop">
+                        <button>close</button>
+                      </form>
+                    </dialog>
+
+                    <!-- modal end -->
+
                     <div
                       class="link flex justify-center gap-[24px] text-gray-500"
                     >
@@ -617,29 +640,33 @@
           <div class="side1">
             <h2 class="text-[30px] font-bold">P-Ticket</h2>
             <p class="text-[16px] mt-[20px] text-gray-400">
-              P-Ticket is a digital platform to make your <br> daily commuting
-              better.
+              P-Ticket is a digital platform to make your <br />
+              daily commuting better.
             </p>
           </div>
           <div class="side2">
             <h2>Download our app</h2>
-            <div class="play-stor flex gap-[20px] border border-white p-[10px] rounded-lg mt-[20px]">
-                <img src="./images/playstore.png" alt="">
-            <div>
+            <div
+              class="play-stor flex gap-[20px] border border-white p-[10px] rounded-lg mt-[20px]"
+            >
+              <img src="./images/playstore.png" alt="" />
+              <div>
                 <h5 class="text-[11px]">GET IN ON</h5>
                 <h4 class="text-[22px]">Google Play</h4>
-            </div>
+              </div>
             </div>
           </div>
         </div>
         <hr class="border-dashed border-gray-400 my-[40px]" />
         <div class="flex justify-between text-white">
-            <p class="text-gray-400">@all rights reserved, P-Ticket services limited.2024</p>
-            <p class="flex justify-between gap-[30px]">
-                <a href="">Terms & condition</a>
-                <a href="">Return & refund policy</a>
-                <a href="">Privacy policy</a>
-            </p>
+          <p class="text-gray-400">
+            @all rights reserved, P-Ticket services limited.2024
+          </p>
+          <p class="flex justify-between gap-[30px]">
+            <a href="">Terms & condition</a>
+            <a href="">Return & refund policy</a>
+            <a href="">Privacy policy</a>
+          </p>
         </div>
       </div>
     </footer>
