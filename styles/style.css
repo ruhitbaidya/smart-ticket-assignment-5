@@ -1,3 +1,9 @@
 .spacefiy{
-    border-right: 2px dashed #8b8888;;
+    border-right: 2px dashed #8b8888;
+}
+.roundedsec{
+    border-radius: 50px !important;
+}
+.borderdrv{
+    border-right: 2px solid #292525 !important;
 }
