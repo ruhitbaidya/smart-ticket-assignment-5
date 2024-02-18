@@ -86,7 +86,7 @@ function cuponVerify() {
   let cuponInput = document.getElementById("cuponValue");
   let discountText = document.getElementById("disText");
   let discountAmount = document.getElementById("disAmount");
-  let inputVal = cuponInput.value.split(" ").join("").toUpperCase();
+  let inputVal = cuponInput.value;
   if (inputVal === "NEW15") {
     let totalTaka = priceTotal;
     let disMoney = (totalTaka / 100) * 15;
@@ -95,7 +95,7 @@ function cuponVerify() {
     document.querySelector(".cupon-apply").classList.add("hidden");
     discountText.innerText = "Discount Price";
     discountAmount.innerHTML = ` BDT <span class="ml-[10px]">${disMoney}</span> `;
-  } else if (inputVal === "COUPLE20") {
+  } else if (inputVal === "Couple 20") {
     let totalTaka = priceTotal;
     let disMoney = (totalTaka / 100) * 20;
     let totalgrentMoney = totalTaka - disMoney;
