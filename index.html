@@ -86,19 +86,19 @@
             </div>
             <img src="./images/cupon-devider.png" alt="" />
             <div class="part-2 text-center p-[20px]">
-              <h3 class="text-[40px]">NEW15</h3>
+              <h3 class="text-[40px] font-bold">NEW15</h3>
               <span>Coupon Code</span>
             </div>
           </div>
           <div class="cuponone rounded-lg items-center flex flex-1 bg-[#F78C9C]">
             <div class="part-1 w-[55%] text-center p-[20px]">
-              <h3 class="text-[40px] font-extrabold">15% OFF</h3>
+              <h3 class="text-[40px] font-extrabold">20% OFF</h3>
               <p>on your next purchase</p>
               <span>use by January 2024</span>
             </div>
             <img src="./images/cupon-devider.png" alt="" />
             <div class="part-2 text-center p-[20px]">
-              <h3 class="text-[40px]">NEW15</h3>
+              <h3 class="text-[35px] font-bold">Couple 20</h3>
               <span>Coupon Code</span>
             </div>
           </div>
@@ -364,10 +364,14 @@
                     <span>Total Price</span>
                     <span>BDT <span id="totalPrice">00</span></span>
                   </div>
+                  <div class="total-price flex justify-between text-[#030712] font-bold">
+                      <span id="disText"></span>
+                      <span id="disAmount"></span>
+                    </div>
                   <div class="cupon-apply relative">
-                    <input readonly class="cupons focus:outline-none p-[15px] rounded-lg w-full" type="text"
+                    <input id="cuponValue" readonly class="cupons focus:outline-none p-[15px] rounded-lg w-full" type="text"
                       placeholder="Have any copupon?" />
-                    <button disabled class="cupons bg-[#1DD100] py-[10px] px-[20px] rounded-lg text-white absolute top-1 right-2">
+                    <button onclick="cuponVerify()" disabled class="cupons bg-[#1DD100] py-[10px] px-[20px] rounded-lg text-white absolute top-1 right-2">
                       Apply
                     </button>
                   </div>

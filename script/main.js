@@ -9,7 +9,9 @@ let purchasebtn = document.getElementById("purchase");
 let name = document.getElementById("pachanger_name");
 let phone = document.getElementById("pachangerNamephone");
 let email = document.getElementById("customerEmail");
-
+let cuponInput = document.getElementById("cuponValue");
+let discountText = document.getElementById("disText");
+let discountAmount = document.getElementById("disAmount");
 let priceTotal = 0;
 let seatCount = 0;
 
@@ -83,5 +85,28 @@ function purchaseButtonEnable(){
         purchasebtn.removeAttribute("disabled");
     }else{
         purchasebtn.setAttribute("disabled", '');
+    }
+}
+
+function cuponVerify(){
+    let inputVal = cuponInput.value.split(" ").join("").toUpperCase();
+    if(inputVal === "NEW15"){
+        let totalTaka = priceTotal;
+        let disMoney = (totalTaka / 100) * 15;
+        let totalgrentMoney = totalTaka - disMoney;
+        grandTotal.innerText = totalgrentMoney;
+        document.querySelector(".cupon-apply").classList.add("hidden");
+        discountText.innerText = "Discount 15%";
+        discountAmount.innerHTML =  ` BDT <span class="ml-[10px]">${disMoney}</span> `;
+    }else if(inputVal === "COUPLE20"){
+        let totalTaka = priceTotal;
+        let disMoney = (totalTaka / 100) * 20;
+        let totalgrentMoney = totalTaka - disMoney;
+        grandTotal.innerText = totalgrentMoney;
+        document.querySelector(".cupon-apply").classList.add("hidden");
+        discountText.innerText = "Discount 20%";
+        discountAmount.innerHTML = ` BDT <span class="ml-[10px]">${disMoney}</span> `;
+    }else{
+        alert("Please Give A Valid Cupon Code For Discount")
     }
 }
