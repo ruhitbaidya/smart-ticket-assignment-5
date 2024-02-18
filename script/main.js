@@ -1,4 +1,4 @@
-let buttonFinds = document.querySelectorAll(".btn");
+let buttonFinds = document.querySelectorAll(".btn-click");
 let addTable = document.getElementById("addSeat");
 let diplayCont = document.getElementById("countSeat");
 let ticketCount = document.getElementById("ticketCount");
@@ -17,7 +17,7 @@ let seatCount = 0;
 
 for (let i = 0; i <= buttonFinds.length; i++) {
     buttonFinds[i].addEventListener("click", function (e) {
-        if (seatCount >= 6) {
+        if (seatCount >= 4) {
             alert("You Can Not Bye Any More Ticket")
         } else {
             let text = e.srcElement.innerText;
@@ -96,7 +96,7 @@ function cuponVerify(){
         let totalgrentMoney = totalTaka - disMoney;
         grandTotal.innerText = totalgrentMoney;
         document.querySelector(".cupon-apply").classList.add("hidden");
-        discountText.innerText = "Discount 15%";
+        discountText.innerText = "Discount Price";
         discountAmount.innerHTML =  ` BDT <span class="ml-[10px]">${disMoney}</span> `;
     }else if(inputVal === "COUPLE20"){
         let totalTaka = priceTotal;
@@ -104,7 +104,7 @@ function cuponVerify(){
         let totalgrentMoney = totalTaka - disMoney;
         grandTotal.innerText = totalgrentMoney;
         document.querySelector(".cupon-apply").classList.add("hidden");
-        discountText.innerText = "Discount 20%";
+        discountText.innerText = "Discount Price";
         discountAmount.innerHTML = ` BDT <span class="ml-[10px]">${disMoney}</span> `;
     }else{
         alert("Please Give A Valid Cupon Code For Discount")
